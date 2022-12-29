@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 middlediv rounded-5 " [ngStyle]="{'background-color': randColor.color}">
+      <div class="imagediv">
+         <div class="innerimagediv" [ngStyle]="{'background-color': randColor.color}">
+              <img
+                [src]="randomUser.image"
+                alt=""
+                class="userimage"
+                width="100px"
+              />
+         </div>
+      </div>
+      <h3 class="username mt-4">{{randomUser.firstName}}&nbsp;{{randomUser.lastName}}</h3>
+      <p class="mt-4 username ">{{randomUser.company.title}}</p>
+      <p class="mt-4 username">{{randomUser.company.name}}</p>
+
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <button (click)="searchRandom()" class="randombuttton" [ngStyle]="{'background-color': randColor.color}">Get Random User</button>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
